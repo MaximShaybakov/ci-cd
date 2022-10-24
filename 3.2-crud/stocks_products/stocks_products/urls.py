@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from stocks_products.logistic.views import index_page
+from logistic.views import index_page
 
 urlpatterns = [
     path('', index_page),
