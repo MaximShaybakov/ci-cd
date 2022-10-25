@@ -1,4 +1,4 @@
-name: Django testing abd deploy
+name: Django testing and deploy
 
 on:
   push:
