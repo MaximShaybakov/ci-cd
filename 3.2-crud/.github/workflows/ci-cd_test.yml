@@ -1,0 +1,29 @@
+name: Django testing and deploy
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  build:
+  
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Check changes
+        uses: actions/checkout@v3
+
+      - name: install python3 
+        uses: actions/setup-python@v3
+          with:
+            python-version: 3.10
+
+      - name: Install Dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Changes code on pep8
+        run: flake8 main
+
+      -name: Run Tests 
+        run: python3 manage.py test
