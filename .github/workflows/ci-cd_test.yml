@@ -6,9 +6,9 @@ on:
       - master
 
 jobs:
-  tests:  
+  tests:
     runs-on: ubuntu-22.04
-    steps: 
+    steps: |
       - name: Check changes
         uses: actions/checkout@v2
 
