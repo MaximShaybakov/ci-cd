@@ -8,7 +8,7 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-22.04
-    steps: |
+    steps: 
       - name: Check changes
         uses: actions/checkout@v2
 
@@ -25,5 +25,5 @@ jobs:
       - name: Checking code on pep8
         run: flake8 main
 
-      -name: Run Tests 
+      - name: Run Tests 
         run: python3 manage.py test
